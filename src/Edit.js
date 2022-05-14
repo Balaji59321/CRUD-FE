@@ -20,7 +20,7 @@ function Edit(props) {
 
   const submitHandler = async () => {
     let resp = await axios.put(
-      `http://localhost:3010/product/update/${val._id}`,
+      `https://crud-api-product.herokuapp.com/product/update/${val._id}`,
       val
     );
     console.log(resp);

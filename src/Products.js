@@ -9,7 +9,9 @@ const Products = () => {
   const [prod, setProd] = useState([]);
   useEffect(() => {
     const func = async () => {
-      const resp = await axios.get("http://localhost:3010/product/get");
+      const resp = await axios.get(
+        "https://crud-api-product.herokuapp.com/product/get"
+      );
       console.log(resp["data"]);
       setProd(resp["data"]);
     };
@@ -17,7 +19,9 @@ const Products = () => {
   }, []);
 
   const deleteHandler = async (id) => {
-    await axios.delete(`http://localhost:3010/product/delete/${id}`);
+    await axios.delete(
+      `https://crud-api-product.herokuapp.com/product/delete/${id}`
+    );
     setProd(prod.filter((ele) => ele._id !== id));
   };
 

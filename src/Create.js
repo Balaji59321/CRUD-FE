@@ -20,7 +20,10 @@ function Create() {
   };
 
   const submitHandler = async () => {
-    let resp = await axios.post("http://localhost:3010/product/add", val);
+    let resp = await axios.post(
+      "https://crud-api-product.herokuapp.com/product/add",
+      val
+    );
     console.log(resp);
     resp["data"]["_message"] &&
       alert("Something went wrong.Please type proper value for form fields");
