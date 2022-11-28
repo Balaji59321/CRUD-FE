@@ -21,7 +21,7 @@ function Create() {
 
   const submitHandler = async () => {
     let resp = await axios.post(
-      "https://crud-api-product.herokuapp.com/product/add",
+      "https://crud-be.onrender.com/product/add",
       val
     );
     console.log(resp);
